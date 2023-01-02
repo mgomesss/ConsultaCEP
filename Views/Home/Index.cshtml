@@ -13,6 +13,8 @@
     <div class="col-5" style="width: 647px; margin: auto;">
         <div class="jumbotron">
 
+            <p style="font-size:small">@ViewBag.erro</p>
+
             <form class="container" action="@Url.Action("Index", "Home")" method="post" enctype="multipart/form-data" style="margin: 0; display: flex; flex-wrap: wrap; justify-content: center;">
                 <input class="form-control" id="cep" name="cep" placeholder="Digite o CEP aqui" />
                 <input type="submit" class="btn btn-success" value="procurar" style="margin-left:5px">

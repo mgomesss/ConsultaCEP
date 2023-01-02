@@ -31,7 +31,7 @@ namespace ConsultaCEP.Controllers
                     }
                     catch
                     {
-                        
+                        ViewBag.erro = "Não foi possivel encontrar o CEP informado, por favor verifique se digitou corretamente.";
                     }
                     
                 }
@@ -46,7 +46,6 @@ namespace ConsultaCEP.Controllers
 
             // Faz uma solicitação GET à URL e armazena a resposta em uma variável
             var response = await client.GetAsync(url);
-
 
             // Verifica se a solicitação foi bem-sucedida
             if (response.IsSuccessStatusCode)
