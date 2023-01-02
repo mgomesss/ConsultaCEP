@@ -1,0 +1,55 @@
+﻿@{
+    @model IEnumerable<ConsultaCEP.Models.ConsultaCep>
+    ViewBag.Title = "Home Page";
+
+}
+
+<div class="row" style="display: flex; margin: auto;">
+
+    <div class="col-2" style="margin: auto">
+
+    </div>
+
+    <div class="col-5" style="width: 647px; margin: auto;">
+        <div class="jumbotron">
+
+            <form class="container" action="@Url.Action("Index", "Home")" method="post" enctype="multipart/form-data" style="margin: 0; display: flex; flex-wrap: wrap; justify-content: center;">
+                <input class="form-control" id="cep" name="cep" placeholder="Digite o CEP aqui" />
+                <input type="submit" class="btn btn-success" value="procurar" style="margin-left:5px">
+            </form>
+
+            <br />
+            <br />
+
+            <div class="container" style="display: grid; justify-content: center;">
+
+                <label>Cep</label>
+                <input class="form-control" id="logradouro" name="logradouro" value="@ViewBag.cep" readonly />
+                <br />
+
+                <label>Rua</label>
+                <input class="form-control" id="logradouro" name="logradouro" value="@ViewBag.logradouro" readonly />
+                <br />
+
+                <label>Bairro</label>
+                <input class="form-control" id="bairro" name="bairro" value="@ViewBag.bairro" readonly />
+                <br />
+
+                <label>Estado</label>
+                <input class="form-control" id="localidade" name="localidade" value="@ViewBag.localidade" readonly />
+                <br />
+
+                <label>UF</label>
+                <input class="form-control" id="uf" name="uf" value="@ViewBag.uf" readonly />
+                <br />
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-2" style="margin: auto">
+
+    </div>
+
+</div>
+
